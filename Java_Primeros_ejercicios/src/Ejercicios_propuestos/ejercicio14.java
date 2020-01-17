@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practica2;
+package Ejercicios_propuestos;
 
 /**
  *
  * @author juang
  */
-public class Practica2 {
+public class ejercicio14 {
     
 }
