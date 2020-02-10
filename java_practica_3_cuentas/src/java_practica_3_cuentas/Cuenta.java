@@ -15,12 +15,14 @@ public class Cuenta {
 
     private String nombreCliente;
     private String numeroCuenta;
+    private String contraseñaCuenta;
     private double tipoInteres;
     private double saldo;
 
     //constructor normal
-    public Cuenta(String nombreCliente, String numeroCuenta, double tipoInteres, double saldo) {
+    public Cuenta(String nombreCliente, String numeroCuenta,String contraseñaCuenta, double tipoInteres, double saldo) {
         this.nombreCliente = nombreCliente;
+        this.contraseñaCuenta=contraseñaCuenta;
         this.numeroCuenta = numeroCuenta;
         this.tipoInteres = tipoInteres;
         this.setSaldo(saldo);
@@ -34,6 +36,7 @@ public class Cuenta {
     public Cuenta(Cuenta c1) {
         this.nombreCliente = c1.nombreCliente;
         this.numeroCuenta = c1.numeroCuenta;
+        this.contraseñaCuenta=c1.contraseñaCuenta;
         this.tipoInteres = c1.tipoInteres;
         this.saldo = c1.saldo;
     }
@@ -45,7 +48,15 @@ public class Cuenta {
     public void setNombreCliente(String nombreCliente) {
         this.nombreCliente = nombreCliente;
     }
+    
+    public String getcontraseñaCuenta() {
+        return contraseñaCuenta;
+    }
 
+    public void setcontraseñaCuenta(String contraseñaCuenta) {
+        this.contraseñaCuenta = contraseñaCuenta;
+    }
+    
     public String getNumeroCuenta() {
         return numeroCuenta;
     }
@@ -84,9 +95,11 @@ public class Cuenta {
     public void SolicitarDatos() {
         Scanner lector = new Scanner(System.in);
         System.out.println("Introduce el nombre");
-        this.setNombreCliente(lector.nextLine());
+        this.setNombreCliente(lector.nextLine().toString());
         System.out.println("Introduce el numero de cuenta");
-        this.setNumeroCuenta(lector.nextLine());
+        this.setNumeroCuenta(lector.nextLine().toString());
+        System.out.println("Introduce la contraseña de cuenta");
+        this.setcontraseñaCuenta(lector.next());
         System.out.println("Introduce el tipo de interes");
         this.setTipoInteres(lector.nextDouble());
         System.out.println("Introduce el saldo de la cuenta");
