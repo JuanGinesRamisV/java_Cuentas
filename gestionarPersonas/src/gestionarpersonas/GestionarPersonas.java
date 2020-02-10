@@ -20,5 +20,6 @@ public class GestionarPersonas {
         p1.SolicitarDatos();
         System.out.println("------------");
         p1.ObtenerDatos();
+        System.out.println("adios");
     }   
 }
